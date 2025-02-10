@@ -1,0 +1,110 @@
+/* Thanks to https://www.jonashietala.se/blog/2024/08/25/a_simple_timeline_using_css_flexbox */
+
+.timeline {
+    --timeline-color: wheat;
+    --default-marker-color: skyblue;
+}
+
+.events {
+    position: relative;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: var(--timeline-color);
+}
+
+.center-timeline {
+    @media (min-width: 700px) {
+        .events::before {
+            left: 50%;
+        }
+
+        .event .marker {
+            order: 1;
+        }
+
+        .event .content {
+            width: 50%;
+            text-align: right;
+            padding-inline: 1em;
+        }
+
+        .event:nth-child(even) {
+            flex-direction: row-reverse;
+
+            .content {
+                text-align: left;
+            }
+
+            .marker {
+                left: 6px;
+            }
+        }
+    }
+}
+
+.event {
+    display: flex;
+    align-items: baseline;
+}
+
+.event .marker {
+    fill: var(--default-marker-color);
+    position: relative;
+    left: -5.5px;
+}
+
+.event.vol1 .marker {
+    fill: #627264;
+}
+
+.event.vol9 .marker {
+    fill: #bfdca4;
+}
+
+.event.vol10 .marker {
+    fill: #82bace;
+}
+
+.event.vol11 .marker {
+    fill: #d1e3dd;
+}
+
+.event.vol12 .marker {
+    fill: #dcb18a;
+}
+
+.event.vol13 .marker {
+    fill: #813020;
+}
+
+.event.vol15 .marker {
+    fill: #e3b4b6;
+}
+
+.event.vol19 .marker {
+    fill: #455a7a;
+}
+
+.event .content {
+    width: 100%;
+}
+
+.event .content p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.event .content time {
+    font-family: 'LXGW WenKai Screen R', serif;
+    font-weight: bold;
+}

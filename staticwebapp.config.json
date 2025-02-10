@@ -1,0 +1,12 @@
+{
+    "routes": [
+        {
+            "route": "/",
+            "rewrite": "/temp-site/index.html"
+        },
+        {
+            "route": "/index.html",
+            "rewrite": "/temp-site/index.html"
+        }
+    ]
+}

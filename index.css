@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.grid-background {
+    background-image: radial-gradient(circle, rgb(228, 231, 235) 2px, #fff 2px);
+    background-size: 20px 20px;
+    background-position: center center;
+}
+
+.para p {
+    text-indent: 2em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.body-layout {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lxgw {
+    font-family: 'LXGW WenKai Screen R', sans-serif;
+}
+
+.noto {
+    font-family: "Noto Serif SC", serif;
+}
+
+.page-title-1 {
+    margin-bottom: 0;
+}
+
+.page-title-2 {
+    margin-top: 0.2em;
+}
+
+.sparator {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.hidden-hr {
+    border: none !important;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .page-title-1 {
+        font-size: 1.5em;
+    }
+
+    .page-title-2 {
+        font-size: 1.2em;
+    }
+
+    .header-2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 500px) {
+    .page-title-1 {
+        font-size: 1.2em;
+    }
+
+    .page-title-2 {
+        font-size: 1em;
+    }
+
+    .header-2 {
+        font-size: 1em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: white;
+    }
+
+    .grid-background {
+        background-image: radial-gradient(circle, rgb(43, 45, 48) 2px, #272727 2px);
+        background-size: 20px 20px;
+        background-position: center center;
+    }
+}
