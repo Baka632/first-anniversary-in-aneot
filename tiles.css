@@ -1,0 +1,12 @@
+.metro-tile {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 1px;
+    background-color: white;
+}
+
+.large-tile {
+    height: 200px;
+    width: 200px;
+}

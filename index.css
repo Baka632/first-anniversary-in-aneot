@@ -6,6 +6,16 @@ img {
     width: 100%;
 }
 
+.page-footer {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.page-footer * {
+    color: gray;
+    margin: 0;
+}
+
 .grid-background {
     background-image: radial-gradient(circle, rgb(228, 231, 235) 2px, #fff 2px);
     background-size: 20px 20px;
@@ -35,7 +45,7 @@ img {
 }
 
 .noto {
-    font-family: "Noto Serif SC", serif;
+    font-family: "Noto Serif CJK SC", serif;
 }
 
 .page-title-1 {
@@ -49,6 +59,12 @@ img {
 .sparator {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
+    border-style: dashed;
+}
+
+.page-footer-sparator {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .hidden-hr {
@@ -58,6 +74,60 @@ img {
 .centering {
     display: flex;
     justify-content: center;
+}
+
+.stories {
+    margin-top: 20px;
+    columns: 4;
+    column-gap: 10px;
+}
+
+.story {
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 10px;
+    border: grey 2px solid;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
+.story:hover {
+    transition: all 0.2s;
+    background-color: white;
+}
+
+.story p {
+    text-align: center;
+    text-indent: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.story img {
+    width: 100%;
+}
+
+.closing-hr {
+    margin-top: 20px;
+    border-style: dotted;
+    width: 50%;
+}
+
+.closing {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.closing p {
+    margin: 0;
+    text-indent: 0;
+}
+
+.closing-sentence {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: large;
+    text-shadow: gray 1px 0 5px;
 }
 
 @media (max-width: 700px) {
@@ -71,6 +141,14 @@ img {
 
     .header-2 {
         font-size: 1.2em;
+    }
+
+    .stories {
+        columns: 3;
+    }
+
+    .story:hover {
+        transform: scale(1.5);
     }
 }
 
@@ -86,6 +164,14 @@ img {
     .header-2 {
         font-size: 1em;
     }
+
+    .stories {
+        columns: 2;
+    }
+
+    .story:hover {
+        transform: scale(1.4);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,5 +183,13 @@ img {
         background-image: radial-gradient(circle, rgb(43, 45, 48) 2px, #272727 2px);
         background-size: 20px 20px;
         background-position: center center;
+    }
+
+    .story:hover {
+        background-color: gray;
+    }
+
+    .closing-sentence {
+        text-shadow: white 1px 0 5px;
     }
 }
